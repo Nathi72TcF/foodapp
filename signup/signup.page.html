@@ -1,0 +1,41 @@
+<ion-content >
+    <div class="login-box">
+        <div align='center'>
+            <h1>SIGN UP</h1>
+          </div>
+
+        <img src="../../assets/images/JJ Logo.png" alt="">
+
+        <form [formGroup]="signupForm" align='center'>
+            <ion-item color="none">
+              <ion-label position="stacked">Email</ion-label>
+              <ion-icon name="mail" slot="start"></ion-icon>
+              <ion-input placeholder="Enter email"  formControlName="email" type="email" [class.invalid]="!signupForm.controls['email'].valid && signupForm.controls['email'].touched" ></ion-input>
+              <div *ngIf="!signupForm.controls['email'].valid
+              && signupForm.controls['email'].touched" class="error">
+              <div class="messages" style="color:black; font-weight: 500;font-weight: 200; font-size: small;">
+                Please enter a valid email.
+              </div>
+              </div>
+            </ion-item>
+
+            <ion-item color="none">
+              <ion-label position="stacked">Password</ion-label>
+              <ion-icon name="mail" slot="start"></ion-icon>
+              <ion-input placeholder="Enter email" name='password' [type]="passwordType" formControlName="password" type="password" [class.invalid]="!signupForm.controls['password'].valid && signupForm.controls['password'].touched" ></ion-input>
+              <ion-icon [name]="passwordIcon" color="#004138" slot="end" (click)='hideShowPassword()'></ion-icon>
+              <div *ngIf="!signupForm.controls['password'].valid  &&
+              signupForm.controls['password'].touched" class="error">
+              <div class="messages" style="color:black; font-weight: 500;font-weight: 200; font-size: small;">
+                Password needs more than 6 characters long.
+              </div>
+              </div>
+            </ion-item>
+            <br>
+            <ion-button value="large" expand="block" (click)="signupUser(signupForm)" [disabled]="!signupForm.valid" color="primary">Register</ion-button><br>
+          </form>
+
+    </div>
+
+    </ion-content>
+  

@@ -1,0 +1,180 @@
+.bgc {
+    background-color: rgb(148, 158, 158);
+    background-size: cover;
+}
+
+.bgc {
+    background-color: rgb(148, 158, 158);
+    background-size: cover;
+}
+
+ion-content {
+    height: 100%;
+    width: 100%;
+    // --background: url("../../assets/images/landingBckgrnd.jpg") no-repeat center center / cover;
+    // --background: linear-gradient(9deg, rgba(0, 74, 67, 1) 10%, rgba(0, 74, 67, 1) 30%, rgba(10, 86, 84, 1) 47%, rgba(54, 144, 166, 1) 89%);
+}
+
+.login-box {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    border-radius: 5px;
+    padding: 10px;
+    //  background-color: hsla(213, 9%, 19%, 0.3);
+    ion-item {
+        color: white;
+    }
+}
+
+.align {
+    text-align: center;
+    margin: auto;
+    padding-top: 6px;
+}
+
+#disapear{
+    display: none;
+  
+  }
+  
+  #camera{
+    // border: solid purple 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    text-shadow: 0px 0px 10px black;
+  }
+  
+  #asd{
+    // border: 2px solid red;
+  }
+  
+  .container {
+      //border: 3px solid blue;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      #background1 {
+     // border: 1px solid blue;
+      position: absolute;
+      width: 100%;
+      bottom: 48%;
+      left: 20%;
+    
+    }
+    #people {
+      #sthombe-upload {
+        color: black;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        opacity: 0;
+        padding: 40px;
+      }
+      #sthombe-upload:hover{
+        opacity: 1;
+      }
+      //border: 1px solid green;
+      width: 15%;
+      position: absolute;
+      bottom: 0;
+      left: 1%;
+    
+    }
+    #bins {
+      // border: 1px solid green;
+        width: 20%;
+        position: absolute;
+        bottom: -1%;
+        right: 14%;
+    }
+    }
+    .form { 
+    //  border: 3px solid red;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.123), 0 6px 20px 0 rgba(0, 0, 0, 0.068);
+      width: 400px;
+      height: 75%;
+      border-radius: 7px;
+      background: white;
+      z-index: 5;
+    }
+    h3 {
+      //border: 3px solid red;
+      margin: 0;
+      margin-top: 5%;
+      font-size: 22px;
+      text-align: center;
+    }
+    .profile {
+      height: 20%;
+     
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      //margin-top: 5px;
+    
+      .ProPic {
+      
+    //  border: 3px solid rgb(76, 0, 255);
+     position: relative;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.123), 0 6px 20px 0 rgba(0, 0, 0, 0.068);
+       margin-top: 10px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+    .inputs {
+     // border: 3px solid rgb(240, 70, 255);
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      margin: 0;
+    
+      input {
+          width: 300px;
+          padding: 10px;
+          margin-top: 5px;
+          border-radius: 50px;
+          border: none;
+          outline: none;
+        background:#EAEAEA;
+        padding-left: 15px;
+        font-size: 15px;
+        
+      }
+      ion-button {
+          width: 150px;
+          margin-top: 25px;
+          outline: none;
+          background: #1B4001;
+          border-radius: 5px;
+          font-size: 12px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.123), 0 6px 20px 0 rgba(0, 0, 0, 0.068);
+    
+      }
+    }
+
+    .icons{
+      margin-left: -30px;
+  }
+    
+    

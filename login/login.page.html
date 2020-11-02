@@ -1,0 +1,48 @@
+
+<ion-content>
+    <div class="login-box">
+        <div class="ion-padding" align="center">
+            <img src="../../assets/images/JJ Logo.png">
+        </div>
+
+        <div class="align"> <a style="color:black; font-weight: 500;font-weight: 200; font-size: small;" (click)="goToRegister()">Register New Account</a></div>
+
+        <form ng-submit="loginForm()" [formGroup]="loginForm">
+            <ion-item color="none">
+                <ion-label position="stacked">Email</ion-label>
+                <ion-icon name="mail" slot="start"></ion-icon>
+                <ion-input placeholder="Enter email"  formControlName="email" [class.invalid]="!loginForm.controls['email'].valid &&
+                  loginForm.controls['email'].touched" ></ion-input>
+                  <div class="error" *ngIf="!loginForm.controls['email'].valid &&
+                  loginForm.controls['email'].touched">
+                <div class="messages">
+                <p class="errors">Please enter a valid email address.</p> 
+                </div>
+                </div>
+            </ion-item>
+
+            <ion-item color="none">
+                <ion-label position="stacked">Password</ion-label>
+                <ion-icon name="key" slot="start"></ion-icon>
+                <ion-input placeholder="Enter password" formControlName="password" type='password'
+                  [class.invalid]="!loginForm.controls['password'].valid&& loginForm.controls['password'].touched" 
+                  [type]="passwordType" name="password" clearOnEdit="false"></ion-input>
+                <ion-icon [name]="passwordIcon" color="#004138" slot="end" (click)='hideShowPassword()'></ion-icon>
+                <div *ngIf="!loginForm.controls['password'].valid
+                  && loginForm.controls['password'].touched" class="error">
+                  <div class="messages">
+                  <p class="errors">Your password is incorrect.</p>
+                  </div>
+                  </div>
+            </ion-item>
+            <br>
+            <div class="align"> <a style="color:black; font-weight: 500;font-weight: 200; font-size: small;" (click)="resetPassword()">Forgot Password?</a></div>
+            <br>
+            
+            <div text-center>
+                <ion-button value="large" expand="block" (click)="loginUser(loginForm)" color="primary"> Login</ion-button><br>
+            </div>
+        </form>
+    </div>
+</ion-content>
+  

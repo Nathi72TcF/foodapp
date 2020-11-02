@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Profile
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon class="icons" name="home" [routerLink]="['/home']"></ion-icon>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">      
+      <img id="background1" >
+      <img id="people" >
+        <img id="bins">
+        <div class="form">
+        <h3>Create Your Profile Here</h3>
+          <div class="profile" >
+            <input id="disapear" class="image-upload"  type="file"  accept="image/*" (change)="changeListener($event)">
+            <div class="ProPic">
+             
+            <label  for="disapear" id="asd"> 
+            <div id="camera">
+              <ion-icon name="camera"></ion-icon>
+            </div>
+            <img *ngIf="!profile.image" src="../../assets/images/avatar.jpg" alt=""> 
+            <img *ngIf="profile.image" src="{{profile.image}}" alt="">
+          </label>
+          </div>     
+        </div>
+          
+         <div class="inputs">
+           <input placeholder="Name"[(ngModel)]="profile.name">
+            <input placeholder="Surname" [(ngModel)]="profile.surname">
+              <!-- <input  placeholder="Position" [(ngModel)]="profile.Account" > -->
+              <!-- <input  placeholder="Email Address"  [(ngModel)]="profile.email"> -->
+              <input placeholder="Phone Number" [(ngModel)]="profile.number" maxlength="10" (keyup)="getPhoneInput($event)" [ngModelOptions]="{standalone: true}" type="tel">
+            <ion-button color="primary" expand="block" (click)="users()" type="submit" >save</ion-button>
+           </div>
+               
+          </div>
+          </div>
+          
+          </ion-content>
+  
